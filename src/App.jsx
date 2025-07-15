@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
+import Onboard from "./pages/Onboard";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(true);
@@ -13,9 +14,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className={`${isMobile ? "" : "invisible"} sticky top-0`}>
+    <div className={`${isMobile ? "" : "invisible"} w-screen h-screen`}>
       <Analytics />
-      <Navbar />
+      <Onboard />
     </div>
   );
 };
